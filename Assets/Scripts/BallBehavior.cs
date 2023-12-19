@@ -20,7 +20,7 @@ public class BallBehavior : MonoBehaviour
 
     public IEnumerator SpawnObject()
     {
-        while (countdownDuration > 0)
+        while (countdownDuration > 0) // timer
         { 
             if (countdownDuration == 1)
             {
@@ -35,7 +35,7 @@ public class BallBehavior : MonoBehaviour
         countdownDuration--;
         }
 
-        while (loop == 0)
+        while (loop == 0) // instantiate a ball at the end of the timer from the camera
         {
             GameObject newObj = Instantiate(ball, Camera.main.transform.position, Camera.main.transform.rotation);
             Rigidbody rb = newObj.GetComponent<Rigidbody>();

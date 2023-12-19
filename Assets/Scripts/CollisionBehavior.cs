@@ -18,7 +18,7 @@ public class CollisionClass : MonoBehaviour
         boardTrans.position = new Vector3(895, 1, 163);
     }
 
-    private void OnCollisionEnter(UnityEngine.Collision collision)
+    private void OnCollisionEnter(UnityEngine.Collision collision) // for the ball function to make sure it hits the checkerboard and can get pos
     {
         if (collision.gameObject.CompareTag("ball"))
         {
